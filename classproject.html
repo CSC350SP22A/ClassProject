@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+body {background-color: white;}
+
+
+</style>
+<script>
+function validate()
+{
+	if(document.getElementById("Animal").value == '')
+	{
+		alert("Animal FIELD IS EMPTY");
+		return false;
+	}
+	else
+		if(document.getElementById("Habitat").value == '')
+		{
+			alert("Habitat FIELD IS EMPTY");
+			return false;
+		}
+			else
+				return true;
+}
+</script>
+</head>
+<body>
+<h1>Animal Form</h1>
+<form action="classproject.php" method="post" onsubmit="return validate();">
+<div>
+<label for="AnimalType">Animal Type:</label><br>
+<input type="text" id="Animal" name ="AnimalType"/>
+</div>
+<label for ="Habitat">Animal Habitat:</label>
+<div>
+<input type="radio" id="land" name="Habitat" value="L">
+<label for="land">Land</label><br>
+<input type="radio" id="Sea" name="Habitat" value="S">
+<label for="Sea">Sea</label><br>
+<input type="radio" id="Air" name="Habitat" value="A">
+<label for="Air">Air</label><br>
+</div>
+
+<tr colspan = "2"><td><input type="submit" value="SUBMIT"></td></tr>
+
+</form>
+</body>
+</html>
